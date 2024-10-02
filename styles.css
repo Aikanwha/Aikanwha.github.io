@@ -1,0 +1,16 @@
+body{
+    background-color: #EBE9E1;
+}
+
+#header h1{
+color: #D6536D;
+}
+
+#header h2{
+    color:#ffa2b6;
+}
+
+#aboutme p, h3{
+    color: #E43D12;
+    text-indent: 50px;
+}
