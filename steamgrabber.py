@@ -59,6 +59,7 @@ def add_if_has_tag(gameinfo,list):
             return
 
 grabbed_games = []
+#What tag would to like to sort games by?
 desired_tag = "Rogue-like"
 num_games_wanted = 0
 
