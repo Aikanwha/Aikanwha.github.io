@@ -89,8 +89,8 @@ if num_games_wanted < 1:
         """.format(
                 icon = game.icon, 
                 gametitle = game.title,
-                score = f"{game.score:.1f}", 
-                hrsplayed = f"{game.hrs_played:.2f}",
+                score = f"score:{game.score:.1f}", 
+                hrsplayed = f"hrs:{game.hrs_played:.2f}",
                 price = f"{game.price:.2f} USD"
             )
         )

@@ -14,3 +14,8 @@ color: #D6536D;
     color: #E43D12;
     text-indent: 50px;
 }
+#gametable {
+    border-style:groove ;
+    width: 30em;
+    height: 20em;
+}
