@@ -1,0 +1,175 @@
+:root {
+    /* Light Theme */
+    --bg-color: #f4f4f4;
+    --container-bg: white;
+    --text-color: #333;
+    --header-bg: #4CAF50;
+    --header-text: white;
+    --task-bg: white;
+    --task-text: #333;
+    --input-bg: white;
+}
+
+[data-theme="dark"] {
+    /* Dark Theme */
+    --bg-color: #121212;
+    --container-bg: #1e1e1e;
+    /* Softer than pure black */
+    --text-color: #f0f0f0;
+    --header-bg: #1a1a1a;
+    --header-text: #4CAF50;
+    /* Green text for contrast */
+    --task-bg: #2d2d2d;
+    --task-text: #e0e0e0;
+    /* Brighter text for readability */
+    --input-bg: #333;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    max-width: 800px;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+}
+
+#themeToggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: inherit;
+}
+
+.container {
+    max-width: 500px;
+    margin: 10px auto;
+    background: var(--container-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    flex-grow: 1;
+    text-align: center;
+    color: var(--header-text);
+}
+
+.input-section {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.task-item {
+    background-color: var(--task-bg);
+    color: var(--task-text);
+}
+
+#task-input {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#add-btn {
+    padding: 10px 15px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#add-btn:hover {
+    background: #218838;
+}
+
+#add-btn:active {
+    transform: scale(0.98);
+}
+
+button,
+.task-item {
+    transition: all 0.2s ease;
+}
+
+#task-list {
+    list-style: style none;
+    padding: 0;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background: var(--task-bg);
+}
+
+.task-text {
+    flex: 1;
+    /*This allows text to take available space*/
+}
+
+.task-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /*Space between timestamp and delete button*/
+}
+
+.task-time {
+    font-size: 0.8em;
+    color: #666;
+    font-style: italic;
+}
+
+.task.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #b82c3a;
+    cursor: pointer;
+}
+
+span, .task-item {
+    max-width: 50%;
+}
+
+.task-meta {
+    max-width: 50%;
+    color: red;
+}

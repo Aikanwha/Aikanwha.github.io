@@ -1,40 +1,85 @@
 <!DOCTYPE html>
-<html>
-<!--
-#TODO:
--Make a script to grab information from (SteamAPI?) to fill in my game table automagically (and keep it updated :O).
--->
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dalton W | Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
-<body>
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-  <div id="header">
-    <h1>Welcome to my Website!</h1>
-    <script src="" async defer></script>
-    <h2>Landing page to all future endeavors</h2>
-  </div>
-  <hr>
+<body class="dark-mode">
+  <div class="container">
+    <header>
+      <div class="theme-switcher">
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+      <div class="profile">
+        <h1>Dalton Wettlaufer</h1>
+        <p class="tagline">A life-long learner with a passion for all things tech.</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#games">Games</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  
-  <h4>Table of games</h4>
-  <p>I'm probably more proud than I should be about this one. I made a python script that grabs my top x games for playtime,
-  and by genre and spits out the results into an html format I can inject into another page! ;O</p>
-        <!--Inject html here--> 
-        <object id="gametable" data="gamelist.html" type="text/html">
+    <main>
+      <section id="about" class="card">
+        <h2>About Me</h2>
+        <p>coming soon...</p>
+      </section>
+
+      <section id="projects" class="card">
+        <h2>Projects</h2>
+        <div class="project-grid">
+
+          <div class="project-item">
+            <h3>To-Do list</h3>
+            <p>A simple to-do web app I'm building to try out some new things!</p>
+            <p>Status: <strong>Ongoing</strong></p>
+            <a href="todo-list/todo.html" target="_blank" "project-link">View</a>
+          </div>
           
-        </object>
+        </div>
+      </section>
 
+      <section id="games" class="card">
+        <h2>My Games</h2>
+        <div class="games-container">
+          <object id="gametable" data="gamelist.html" type="text/html" class="steam-games-embed"></object>
+        </div>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>Contact</h2>
+        <div class="contact-links">
+          <a href="mailto:aikanwha@gmail.com" class="contact-link">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+          <a href="https://github.com/Aikanwha" target="_blank" class="contact-link">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://linkedin.com/in/dalton-wettlaufer-91223b246/" target="_blank" class="contact-link">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Dalton Wettlaufer. All rights reserved.</p>
+    </footer>
   </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
