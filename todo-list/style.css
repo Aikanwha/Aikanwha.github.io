@@ -146,7 +146,7 @@ button,
     font-style: italic;
 }
 
-.task.completed {
+.task.completed .task-text {
     text-decoration: line-through;
     opacity: 0.6;
 }
